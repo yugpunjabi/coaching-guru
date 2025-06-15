@@ -1,5 +1,39 @@
 # Welcome to your Expo app 👋
 
+# 📚 Coaching Guru - Learning Made Easy
+
+**Coaching Guru** is a React Native mobile application built with **Expo**, designed to provide users with a smooth and personalized learning experience. Whether you're a teacher managing your own courses or a student looking to track progress, this app makes it all possible in one place.
+
+[🚀 Live Demo](https://coaching-guru-yug-app-dev-project--sxsnx9745d.expo.app)
+
+---
+
+## ✨ Features
+
+- ✅ **User Authentication** (via Firebase)
+- ✅ **Course Enrollment System**
+- ✅ **Dynamic Chapter Playback**
+- ✅ **Progress Tracking with Visual Indicators**
+- ✅ **Add Your Own Courses** (for creators or instructors)
+- ✅ **Responsive UI with Expo Router Navigation**
+- ✅ **Fully Integrated with Firestore**
+- ✅ **Start Now Button** (directly begins the first chapter)
+- ✅ **User Profile Management**
+- ✅ **Custom Icons & Theme Support**
+- ✅ **Cross-Platform Support (Android & iOS)**
+
+## 🔧 Tech Stack
+
+| Tech | Description |
+|------|-------------|
+| 🛠 React Native | Frontend framework |
+| ⚛️ Expo | Framework for fast mobile development |
+| 🔥 Firebase | Authentication & Firestore DB |
+| 📦 EAS | For building APKs & deployment |
+| 🧭 Expo Router | Navigation management |
+| 🎨 Custom Styles | Modular styling with `StyleSheet` |
+| 📁 Context API | User detail management |
+
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
