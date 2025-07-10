@@ -1,8 +1,8 @@
 import { View, Text, Image, StyleSheet, FlatList } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import Colors from '../../constant/Colors';
-import Button from '../../components/Shared/Button';
+import Colors from '../../../../constant/Colors'
+import Button from '../../../../components/Shared/Button';
 
 export default function QuizSummary() {
   const { quizResultParam } = useLocalSearchParams();
@@ -38,7 +38,7 @@ export default function QuizSummary() {
       ListHeaderComponent={
         <View>
           <Image
-            source={require('../../assets/images/wave.png')}
+            source={require('../../../../assets/images/wave.png')}
             style={{
               width: '100%',
               resizeMode: 'cover',
@@ -52,7 +52,7 @@ export default function QuizSummary() {
                 textAlign: 'center',
                 fontFamily: 'outfit-bold',
                 fontSize: 30,
-                color: Colors.WHITE,
+                color: Colors.BLACK,
               }}
             >
               Quiz Summary
@@ -68,11 +68,11 @@ export default function QuizSummary() {
               }}
             >
               <Image
-                source={require('../../assets/images/trophy.png')}
+                source={require('../../../../assets/images/trophy.png')}
                 style={{
                   width: 100,
                   height: 100,
-                  marginTop: -60,
+                  marginTop: -40,
                 }}
               />
               <Text style={{ fontSize: 26, fontFamily: 'outfit-bold' }}>

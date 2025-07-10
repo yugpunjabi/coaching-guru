@@ -12,6 +12,11 @@ export default function CourseView() {
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const GetCourseById=async()=>{
+    const docRef=await getDoc(doc(db,'Courses',courseId));
+    const courseData=docRef.data();
+  }
+
   useEffect(() => {
     const loadCourse = async () => {
       try {
@@ -53,7 +58,7 @@ export default function CourseView() {
 
   return (
     <FlatList
-      data={[]} // Can be course.chapters if needed
+      data={[]}
       ListHeaderComponent={
         <View style={{ flex: 1, backgroundColor: Colors.WHITE }}>
           <Intro course={course} enroll={enroll} />

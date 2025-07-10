@@ -25,7 +25,7 @@ export default function NoCourse() {
             }}>You Don't Have Any Course</Text>
 
             <Button text={'+ Create New Course'} onPress={() => router.push('/addCourse')} />
-            <Button text={'Explore Existing Courses'}
+            <Button onPress={()=>{router.push('/explore')}} text={'Explore Existing Courses'}
                 type='outline' />
         </View>
     )

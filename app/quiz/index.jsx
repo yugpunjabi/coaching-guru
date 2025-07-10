@@ -7,7 +7,7 @@ import * as Progress from 'react-native-progress';
 import Button from '../../components/Shared/Button';
 import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '../../config/firebaseConfig';
-import Summary from './summary';
+import Summary from '../courseView/[courseId]/summary';
 
 export default function Quiz() {
   const { courseParams } = useLocalSearchParams();
@@ -45,7 +45,7 @@ export default function Quiz() {
       });
       setLoading(false);
       router.replace({
-        pathname: '/practice/summary',
+        pathname: '/courseView/[courseId]/summary',
         params: {
           quizResultParam: JSON.stringify(result)
         }
@@ -59,7 +59,7 @@ export default function Quiz() {
   return (
     <View>
       <Image
-        source={require('../../assets/images/wave.png')}
+        source={require('./../../assets/images/wave.png')}
         style={{ height: 800, width: '100%' }}
       />
       <View style={{ position: 'absolute', padding: 25, width: '100%' }}>

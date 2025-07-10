@@ -6,6 +6,7 @@ import Colors from '../../constant/Colors';
 import FlipCard from 'react-native-flip-card';
 import * as Progress from 'react-native-progress';
 import { FlashList } from '@shopify/flash-list';
+import Button from '../../components/Shared/Button';
 
 export default function Flashcards() {
     const { courseParams } = useLocalSearchParams();
@@ -18,7 +19,7 @@ export default function Flashcards() {
     const [currentPage, setCurrentPage] = useState(0);
     const width = Dimensions.get('window').width;
 
-    const GetProgress = () => currentPage / flashcard?.length;
+    const GetProgress = () => (currentPage+1) / flashcard?.length;
 
     const onScroll = (event) => {
         const index = Math.round(event?.nativeEvent?.contentOffset?.x / width);
@@ -111,6 +112,8 @@ export default function Flashcards() {
                             </View>
                         )}
                     />
+                
+
                 </View>
             </View>
         </View>
@@ -119,28 +122,26 @@ export default function Flashcards() {
 
 const styles = StyleSheet.create({
     flipCard: {
-        width: Dimensions.get('window').width * 0.78,
-        height: 400,
-        backgroundColor: Colors.WHITE,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 20,
-        marginHorizontal: Dimensions.get('window').width * 0.05,
+      width: Dimensions.get('window').width * 0.78,
+      height: 400,
+      borderRadius: 20,
+      overflow: 'hidden', // 🔧 Important to clip overflowing content
     },
     frontCard: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 20,
-        height: '100%',
+      flex: 1,
+      backgroundColor: Colors.WHITE,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 20,
+      padding: 20,
     },
     backCard: {
-        display: 'flex',
-        justifyContent: 'center',
-        borderRadius: 20,
-        alignItems: 'center',
-        height: '100%',
-        backgroundColor: Colors.PRIMARY,
+      flex: 1,
+      backgroundColor: Colors.PRIMARY,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 20,
+      padding: 20,
     },
-});
+  });
+  

@@ -5,8 +5,9 @@ import * as Progress from 'react-native-progress';
 import { imageAssets } from '../../constant/Option';
 
 export default function CourseProgressCard({ item, width = 280 }) {
-  const completedChapters = item?.completedChapter?.length || 0;
+  const rawCompleted = item?.completedChapter?.length || 0;
   const totalChapters = item?.chapters?.length || 0;
+  const completedChapters = Math.min(rawCompleted, totalChapters);
   const progress = totalChapters > 0 ? completedChapters / totalChapters : 0;
 
   return (

@@ -44,7 +44,7 @@ export default function Intro({ course, enroll }) {
             params: {
                 chapterParams: JSON.stringify({ ...firstChapter, courseData: course }),
                 docId: course?.docId,
-                chapterIndex: 0
+                chapterIndex: indexedDB.toString()
             }
         });
     };

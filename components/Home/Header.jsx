@@ -19,6 +19,7 @@ export default function Header() {
                 <Text style={{
                     fontFamily: 'outfit-bold',
                     fontSize: 25,
+                    marginTop: 10,
                     color: Colors.WHITE
                 }}>Hello,{userDetail?.name}</Text>
                 <Text style={{

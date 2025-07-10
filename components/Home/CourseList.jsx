@@ -5,7 +5,7 @@ import Colors from '../../constant/Colors';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from 'expo-router';
 
-export default function CourseList({ courseList, heading="Courses", enroll=false }) {
+export default function CourseList({ courseList, heading = "Courses", enroll = false }) {
   const router = useRouter();
 
   return (
@@ -14,18 +14,18 @@ export default function CourseList({ courseList, heading="Courses", enroll=false
 
       <FlatList
         data={courseList}
-        horizontal={true}
+        horizontal
         showsHorizontalScrollIndicator={false}
         keyExtractor={(item, index) => item?.docId || index.toString()}
         renderItem={({ item }) => (
           <TouchableOpacity
             onPress={() =>
               router.push({
-                pathname: `/courseView/${item?.docId}`, // ✅ Correct dynamic path
+                pathname: `/courseView/${item?.docId}`,
                 params: {
                   courseParams: JSON.stringify(item),
-                  enroll: enroll
-                }
+                  enroll: enroll,
+                },
               })
             }
             style={styles.courseContainer}
@@ -35,33 +35,22 @@ export default function CourseList({ courseList, heading="Courses", enroll=false
               style={{
                 width: '100%',
                 height: 150,
-                borderRadius: 15
+                borderRadius: 15,
               }}
             />
-            <Text
-              style={{
-                fontFamily: 'outfit-bold',
-                fontSize: 18,
-                marginTop: 10
-              }}
-            >
+            <Text style={{ fontFamily: 'outfit-bold', fontSize: 18, marginTop: 10 }}>
               {item?.courseTitle}
             </Text>
             <View
               style={{
-                display: 'flex',
                 flexDirection: 'row',
                 gap: 5,
                 alignItems: 'center',
-                marginTop: 5
+                marginTop: 5,
               }}
             >
               <Ionicons name="book-outline" size={24} color="black" />
-              <Text
-                style={{
-                  fontFamily: 'outfit'
-                }}
-              >
+              <Text style={{ fontFamily: 'outfit' }}>
                 {item?.chapters?.length} Chapters
               </Text>
             </View>
@@ -78,6 +67,6 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.BG_GRAY,
     margin: 6,
     borderRadius: 15,
-    width: 260
-  }
+    width: 260,
+  },
 });

@@ -51,7 +51,7 @@ export default function Home() {
             ) : (
               <View>
                 <CourseProgress courseList={courseList} />
-                <PracticeSection course={courseList[0]} /> {/* 👈 pass first course */}
+                <PracticeSection course={courseList[0]} />
                 <CourseList courseList={courseList} />
               </View>
             )}

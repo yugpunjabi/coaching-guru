@@ -33,7 +33,6 @@ export default function ChapterView() {
     // Clamp the currentPage to a valid range
     const currentContent = currentPage < totalPages ? chapters.content[currentPage] : null;
 
-
     const isContentEmpty = !chapters?.content || chapters.content.length === 0;
 
     return (

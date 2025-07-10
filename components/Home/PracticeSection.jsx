@@ -19,7 +19,7 @@ export default function PracticeSection({ course }) {
           <TouchableOpacity
             onPress={() =>
               router.push({
-                pathname: '/practice' + item.path,
+                pathname: '/practice/'+item.name,
                 params: {
                   courseParams: JSON.stringify(course),
                 },
