@@ -4,7 +4,7 @@
 
 **Coaching Guru** is a React Native mobile application built with **Expo**, designed to provide users with a smooth and personalized learning experience. Whether you're a teacher managing your own courses or a student looking to track progress, this app makes it all possible in one place.
 
-[🚀 Live Demo](https://coaching-guru-yug-app-dev-project--sxsnx9745d.expo.app)
+[🚀 Live Demo](https://coaching-guru-yug-app-dev-project--ejq1rpozj7.expo.app/)
 
 ---
 
